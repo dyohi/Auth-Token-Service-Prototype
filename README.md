@@ -7,6 +7,7 @@ This project aims to create a fully-functioning JSON web service with web-based 
 ### Getting Started
 
 * Migrate database:
+
 ```rake db:migrate```
 
 * Go to http://localhost:3000/
@@ -16,8 +17,8 @@ This project aims to create a fully-functioning JSON web service with web-based 
 * Upon successfully signing in you will be redirected to the home page whereyour email and authentication token will be displayed at the top of the screen.
 		
 * Once you have you authentication token you can access access the courses routesby passing your authentication token with the url.
+	For example, to get a list of courses you may use the url:
 
-		For example, to get a list of courses you may use the url:
 ```http://localhost:3000/courses?auth_token=[insert your token here]```
 
 I recommend using [RESTClient](http://www.restclient.net) for testing web services.
