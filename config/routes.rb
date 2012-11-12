@@ -1,11 +1,9 @@
 TokenService::Application.routes.draw do
-  devise_for :users
 
-  # get '/mu-b7a80520-38574f1d-8d74f9b9-cd358b57' do
-  #     '42'
-  #   end
-  get '/mu-b7a80520-38574f1d-8d74f9b9-cd358b57', :to => proc { |env| [200, {}, ["42"]] }
-  
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :courses
   root :to=>"courses#index"
   
